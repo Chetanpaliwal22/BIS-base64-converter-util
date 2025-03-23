@@ -1,6 +1,6 @@
 # BIS - Base64 Converter Util
 
-A simple and clean web-based utility for encoding and decoding strings to and from Base64 format.
+A simple and clean web-based utility (available here - https://chetanpaliwal22.github.io/BIS-base64-converter-util/) for encoding and decoding strings to and from Base64 format.
 
 This utility provides a straightforward interface for converting text to Base64 and vice-versa, designed for ease of use and efficiency.
 
