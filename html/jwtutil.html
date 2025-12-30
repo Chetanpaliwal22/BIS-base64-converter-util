@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIS - JWT Util</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./jwt.css">
+</head>
+<body>
+    <header class="top-header">
+        <div class="header-content">
+            <div class="header-left">
+                <h2><i class="fas fa-shield-alt"></i> BIS - JWT Util</h2>
+                <p>JWT Encoder / Decoder</p>
+            </div>
+            <nav class="util-nav" role="navigation" aria-label="Utilities">
+                <a href="index.html" class="nav-link" data-page="base64"><i class="fas fa-code"></i> Base64</a>
+                <a href="jwtutil.html" class="nav-link" data-page="jwt"><i class="fas fa-key"></i> JWT</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="background"></div>
+    <div class="container">
+        <h3>Decode JWT</h3>
+        <label for="jwtInput">JWT Token</label>
+        <textarea id="jwtInput" placeholder="Paste JWT here..."></textarea>
+        <div class="button-area">
+            <button id="jwtDecodeBtn" class="btn btn-primary"><i class="fas fa-search"></i> Decode</button>
+            <button id="copyDecodedBtn" class="btn btn-success"><i class="fas fa-copy"></i> Copy Decoded</button>
+        </div>
+        <label for="jwtDecoded">Decoded Output</label>
+        <textarea id="jwtDecoded" placeholder="Decoded header and payload will appear here..."></textarea>
+
+        <hr style="margin:20px 0;">
+
+        <h3>Encode JWT</h3>
+        <label for="jwtHeader">Header (JSON)</label>
+        <textarea id="jwtHeader">{"alg":"HS256","typ":"JWT"}</textarea>
+        <label for="jwtPayload">Payload (JSON)</label>
+        <textarea id="jwtPayload" placeholder='{"sub":"1234567890","name":"John Doe"}'></textarea>
+        <label for="jwtSecret">Secret (for HS256 signing; optional)</label>
+        <input id="jwtSecret" type="text" placeholder="secret (optional)" style="width:100%;padding:10px;margin-bottom:12px;border-radius:8px;border:2px solid #e0e0e0;">
+        <div class="button-area">
+            <button id="jwtEncodeBtn" class="btn btn-primary"><i class="fas fa-key"></i> Encode</button>
+            <button id="copyJwtBtn" class="btn btn-success"><i class="fas fa-copy"></i> Copy Token</button>
+        </div>
+        <label for="jwtOutput">JWT Output</label>
+        <textarea id="jwtOutput" placeholder="Generated token will appear here..."></textarea>
+
+        <div class="copy-feedback" id="copyFeedback">Copied to clipboard!</div>
+    </div>
+
+    <footer class="bottom-footer">
+        <p>&copy; Copyright Bagora Innovative Solutions</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -151,6 +151,3 @@ document.addEventListener('DOMContentLoaded', () => {
         // no-op
     }
 });
-
-// Adjust paths for GitHub Pages
-// Ensure all relative paths are correct for hosted environment
