@@ -1,6 +1,4 @@
-/* Adjust paths for GitHub Pages */
-@import url('./css/common.css');
-
+/* common.css - shared styles for BIS utilities (moved from style.css) */
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +7,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    color: #1f2937;
+    background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
+    color: #0f172a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,15 +24,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
     z-index: -1;
 }
 
 .container {
-    background: #ffffff;
+    background: white;
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 600px;
     animation: slideUp 0.5s ease-out;
@@ -66,9 +64,9 @@ label {
 textarea {
     width: 100%;
     padding: 14px;
-    background-color: #f3f4f6;
-    color: #111827;
-    border: 2px solid #d1d5db;
+    background-color: #f8f9fa;
+    color: #202124;
+    border: 2px solid #e0e0e0;
     border-radius: 8px;
     resize: vertical;
     font-size: 1em;
@@ -79,9 +77,9 @@ textarea {
 
 textarea:focus {
     outline: none;
-    border-color: #3b82f6;
+    border-color: #667eea;
     background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 textarea::placeholder {
@@ -111,33 +109,36 @@ textarea::placeholder {
 }
 
 .btn-primary {
-    background-color: #3b82f6;
+    background-color: #2563eb;
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #2563eb;
-    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.4);
+    background-color: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.28);
 }
 
 .btn-secondary {
-    background-color: #1e40af;
+    background-color: #06b6d4;
     color: white;
 }
 
 .btn-secondary:hover {
-    background-color: #1e3a8a;
-    box-shadow: 0 8px 16px rgba(30, 58, 138, 0.4);
+    background-color: #0891b2;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.22);
 }
 
 .btn-success {
-    background-color: #10b981;
+    background-color: #f97316;
     color: white;
 }
 
 .btn-success:hover {
-    background-color: #059669;
-    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.4);
+    background-color: #ea580c;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(249, 115, 22, 0.22);
 }
 
 .btn:active {
@@ -148,7 +149,7 @@ textarea::placeholder {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #48bb78;
+    background-color: #10b981;
     color: white;
     padding: 12px 20px;
     border-radius: 8px;
@@ -185,6 +186,19 @@ textarea::placeholder {
     textarea {
         min-height: 100px;
     }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-left {
+        text-align: center;
+    }
+
+    .util-nav {
+        margin-top: 8px;
+    }
 }
 
 /* Header Styles */
@@ -193,17 +207,21 @@ textarea::placeholder {
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
     color: white;
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 18px rgba(2,6,23,0.28);
     z-index: 100;
 }
 
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 10px;
 }
 
 .header-content h2 {
@@ -229,21 +247,58 @@ textarea::placeholder {
     opacity: 0.9;
 }
 
-/* Footer Styles */
-/* Ensure footer fully covers bottom */
-.bottom-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 60px; /* Adjust height as needed */
-    display: flex;
+.header-left {
+    text-align: left;
+}
+
+/* Improved util navigation (pill buttons) */
+.util-nav {
+    margin-top: 10px;
+    display: inline-flex;
+    gap: 8px;
+}
+
+.util-nav .nav-link {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    z-index: 100;
-    margin: 0; /* Remove any margin */
-    padding: 0; /* Ensure no padding affects layout */
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.18s ease;
+}
+
+.util-nav .nav-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.util-nav .nav-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(102,126,234,0.12);
+}
+
+.util-nav .nav-link.active {
+    background: linear-gradient(90deg,#06b6d4,#2563eb);
+    box-shadow: 0 10px 30px rgba(37,99,235,0.22);
+    border-color: rgba(0,0,0,0.12);
+}
+
+/* Footer Styles */
+.bottom-footer {
+    background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    box-shadow: 0 -6px 18px rgba(2,6,23,0.22);
+    margin-top: 40px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calv(50% - 50vw);
 }
 
 .bottom-footer p {

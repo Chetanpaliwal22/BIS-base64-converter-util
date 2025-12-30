@@ -1,0 +1,7 @@
+@import './common.css';
+
+/* page-specific overrides for JWT Util */
+
+.header-content h2 {
+    /* ensure page title displays appropriately for JWT */
+}
