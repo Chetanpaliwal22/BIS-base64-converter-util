@@ -296,7 +296,9 @@ textarea::placeholder {
     padding: 25px 20px;
     box-shadow: 0 -6px 18px rgba(2,6,23,0.22);
     margin-top: 40px;
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calv(50% - 50vw);
 }
 
 .bottom-footer p {
