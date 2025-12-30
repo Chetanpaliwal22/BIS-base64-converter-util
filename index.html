@@ -4,23 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIS - Base64 Converter Util</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <header class="top-header">
+        <div class="header-content">
+            <h2><i class="fas fa-shield-alt"></i> BIS - Codex</h2>
+            <p>Fast & Secure Base64 Encoding/Decoding</p>
+        </div>
+    </header>
+    
+    <div class="background"></div>
     <div class="container">
-        <h1>BIS - Base64 Converter Util</h1>
-        <div class="input-area">
-            <textarea id="inputString" placeholder="Enter text to convert..."></textarea>
+        <div class="input-section">
+            <label for="inputString">Input Text</label>
+            <textarea id="inputString" placeholder="Enter text to encode or the Base64 string to decode..."></textarea>
         </div>
+        
         <div class="button-area">
-            <button id="encodeBtn">Encode</button>
-            <button id="decodeBtn">Decode</button>
-            <button id="copyBtn">Copy Output</button>
+            <button id="encodeBtn" class="btn btn-primary">
+                <i class="fas fa-arrow-right"></i> Encode
+            </button>
+            <button id="decodeBtn" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Decode
+            </button>
+            <button id="copyBtn" class="btn btn-success">
+                <i class="fas fa-copy"></i> Copy
+            </button>
         </div>
-        <div class="output-area">
-            <textarea id="outputString" placeholder="Result..."></textarea>
+        
+        <div class="output-section">
+            <label for="outputString">Output Result</label>
+            <textarea id="outputString" placeholder="Your result will appear here..."></textarea>
         </div>
+
+        <div class="copy-feedback" id="copyFeedback">Copied to clipboard!</div>
     </div>
-    <script src="script.js"></script>
+
+    <footer class="bottom-footer">
+        <p>&copy; Copyright Bagora Innovative Solutions</p>
+    </footer>
+    
+    <script src="./script.js"></script>
 </body>
 </html>
